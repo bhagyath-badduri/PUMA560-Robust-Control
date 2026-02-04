@@ -46,7 +46,10 @@ under **model uncertainty and unknown payload disturbances**.
 
 ---
 
-# 👤 Author's
-**Bhagyath Badduri** 
-**Mohammad Althaf syed**
+## 👤 Authors
+
+- **Bhagyath Badduri**  
+- **Mohammad Althaf Syed**  
+
 Master’s in Robotics
+
