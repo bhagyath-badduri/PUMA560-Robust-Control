@@ -39,9 +39,7 @@ The study demonstrates how **model-based controllers degrade under uncertainty**
 
 The PUMA 560 dynamics are modeled using:
 
-\[
-\tau = M(q)\ddot{q} + C(q,\dot{q})\dot{q} + G(q)
-\]
+`τ = M(q)q̈ + C(q, q̇)q̇ + G(q)`
 
 Where:
 - \(M(q)\): Inertia matrix  
@@ -50,7 +48,7 @@ Where:
 
 The model is implemented using **MATLAB Robotics Toolbox** with parameters from Armstrong et al. (1986).
 
-✔ Model validation:
+ Model validation:
 - Compared with **Recursive Newton-Euler (RNE)**
 - Error < \(10^{-4}\) Nm (high accuracy)
 
@@ -66,11 +64,9 @@ The model is implemented using **MATLAB Robotics Toolbox** with parameters from 
 
 Control law:
 
-\[
-\tau = M(q)(\ddot{q}_d + K_d\dot{e} + K_p e) + C(q,\dot{q})\dot{q} + G(q)
-\]
+`τ = M(q)(q̈_d + K_d ė + K_p e) + C(q, q̇)q̇ + G(q)`
 
-✔ Works well under **perfect model conditions**
+ Works well under **perfect model conditions**
 
 ---
 
@@ -80,12 +76,12 @@ Control law:
   - Lyapunov stability principles  
   - Disturbance compensation  
 
-✔ Handles:
+Handles:
 - Unknown payload  
 - Model mismatch  
 - External disturbances  
 
-✔ Improves:
+Improves:
 - Tracking accuracy  
 - Stability under uncertainty  
 
@@ -131,7 +127,7 @@ A **quintic polynomial trajectory** is used:
 
 ### Robust Min-Max Controller
 
-✔ Key Improvements:
+ Key Improvements:
 
 - Reduced joint tracking error across all joints  
 - Faster settling time  
